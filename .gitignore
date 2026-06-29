@@ -1,0 +1,11 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local test artifacts
+*.log
+
+# Personal CSTimer exports (large/private)
+cstimer_*.txt

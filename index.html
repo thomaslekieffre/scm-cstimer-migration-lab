@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCM CSTimer Migration Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>SCM CSTimer Migration Lab</h1>
+        <p>outil public de test de migration cstimer vers speedcube master</p>
+        <p class="tiny" id="app-version">build beta-test v1.0.0</p>
+      </header>
+
+      <section class="card controls">
+        <div class="row">
+          <div>
+            <label for="puzzle-select">Puzzle WCA</label>
+            <select id="puzzle-select"></select>
+          </div>
+          <div>
+            <label for="session-select">Session</label>
+            <select id="session-select"></select>
+          </div>
+          <div class="chips">
+            <span id="storage-chip" class="chip">STOCKAGE: -</span>
+            <span id="import-chip" class="chip">SOURCE: MANUEL</span>
+          </div>
+        </div>
+        <div class="timer-box">
+          <p id="timer-display" class="timer-display">0.00</p>
+          <button id="timer-button" type="button" class="btn-primary">START</button>
+        </div>
+        <p class="hint">SPACE = START / STOP</p>
+      </section>
+
+      <section class="card import">
+        <h2>IMPORT CSTIMER TXT</h2>
+        <div class="row import-row">
+          <input id="file-input" type="file" accept=".txt,application/json,text/plain" />
+          <button id="import-button" type="button" class="btn-secondary">IMPORTER</button>
+        </div>
+        <p id="import-status" class="status">EN ATTENTE.</p>
+      </section>
+
+      <section class="card diagnostics">
+        <div class="solves-header">
+          <h2>DIAGNOSTIC IMPORT</h2>
+          <div class="actions">
+            <button id="copy-report-button" type="button" class="btn-secondary">COPIER RAPPORT BUG</button>
+          </div>
+        </div>
+        <p id="diagnostic-summary" class="summary">Aucun import exécuté.</p>
+        <pre id="diagnostic-body" class="diagnostic-body">-</pre>
+      </section>
+
+      <section class="card solves">
+        <div class="solves-header">
+          <h2>SOLVES</h2>
+          <div class="actions">
+            <button id="clear-current-button" type="button" class="btn-secondary">RESET PUZZLE</button>
+            <button id="clear-all-button" type="button" class="btn-danger">RESET TOUT</button>
+          </div>
+        </div>
+        <p id="summary" class="summary"></p>
+        <ul id="solve-list" class="solve-list"></ul>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

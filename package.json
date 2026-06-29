@@ -1,0 +1,10 @@
+{
+  "name": "scm-cstimer-migration-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public test app for CSTimer to Speedcube Master migration",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  }
+}
